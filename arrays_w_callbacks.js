@@ -86,3 +86,38 @@ panagram.forEach(word => console.log(word + '!'));
 // -- The forEach() method does not modify the original array, it iterates over the elements of the array and performs the specified operation on each element. To store the modified values in a new array, we can use the map() method.
 // Can you store the values from a forEach method in a new array?
 // -- Yes, we can store the values from a forEach() method in a new array
+
+// ******************************
+// Map
+// ******************************
+
+// make a new array of each number multiplied by 100
+const multipliedNumbers = nums.map(num => num * 100);
+console.log(multipliedNumbers); 
+// make a new array of all the words in all uppercase
+const uppercasedWords = panagram.map(word => word.toUpperCase());
+console.log(uppercasedWords); 
+
+// ******************************
+// Thought Questions
+// ******************************
+
+// What happened to the original array?
+// -- The original array does not change when using the map() method. The map() method creates a new array based on the original array, but it does not modify the original array. This is because the map() method takes each element of the original array and passes it to a callback function. The callback function can then perform any operation on the element, but it cannot modify the original element.
+
+// Can you store the values from a map method in a new array?
+// -- Yes, we can store the values from a map() method in a new array. The map() method returns a new array, so we can simply assign the result of the map() method to a new variable.
+
+// ******************************
+// Some
+// ******************************
+
+// Find out if some numbers are divisible by 7
+const someDivisibleBy7 = nums.some(num => num % 7 === 0);
+console.log('Some numbers divisible by 7:', someDivisibleBy7); // Output: true
+// Find out if some words have the letter a in them
+const someWithA = panagram.some(word => word.includes('a'));
+console.log('Some words have "a" in them:', someWithA); // Output: true
+
+
+
